@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  excercise:
+    build: .
+    environment:
+      - DJANGO_ENV=development
+    ports:
+      - "8000:8000"
+    volumes:
+      - .:/app
