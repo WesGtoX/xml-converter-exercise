@@ -59,3 +59,44 @@ class XMLConversionTestCase(TestCase):
                     },
                 ],
             })
+
+    def test_parse_xml_fromstring(self) -> None:
+        root = """
+        <?xml version="1.0"?>
+        <Root>
+            <Address>
+                <StreetLine1>123 Main St.</StreetLine1>
+                <StreetLine2>Suite 400</StreetLine2>
+                <City>San Francisco</City>
+                <State>CA</State>
+                <PostCode>94103</PostCode>
+            </Address>
+        </Root>
+        """
+        result = parse_xml_fromstring(xml_fromstring=root)
+        self.assertEqual('Root', result.tag)
+        self.assertIsInstance(result, Element)
+
+    def test_parse_xml_fromstring_empty(self) -> None:
+        with self.assertRaises(ParseError):
+            parse_xml_fromstring(xml_fromstring='')
+
+    def test_parse_xml_to_dict(self) -> None:
+        root = """
+        <Foo>
+            <Bar>Baz</Bar>
+        </Foo>
+        """
+        tree = parse_xml_fromstring(xml_fromstring=root)
+        xml_parsed = parse_xml_to_dict(el=tree)
+        self.assertIsInstance(xml_parsed.get('Foo'), list)
+        self.assertEqual(xml_parsed.get('Foo')[0].get('Bar'), 'Baz')
+
+    def test_parse_xml_to_dict_empty(self) -> None:
+        root = """
+        <?xml version="1.0"?>
+        <Root></Root>
+        """
+        tree = parse_xml_fromstring(xml_fromstring=root)
+        xml_parsed = parse_xml_to_dict(el=tree)
+        self.assertEqual(xml_parsed.get('Root'), '')
