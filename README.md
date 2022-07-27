@@ -13,8 +13,8 @@
 </p>
 
 <p align="center">
-  <img alt="XML Converter Exercise CI" src="https://github.com/WesGtoX/xml-converter-exercise/actions/workflows/docker-image.yml/badge.svg" />
-  <img alt="codecov" src="https://codecov.io/gh/WesGtoX/xml-converter-exercise/branch/main/graph/badge.svg?token=CODECOV_TOKEN" />
+  <img alt="XML Converter CI" src="https://github.com/WesGtoX/xml-converter-exercise/actions/workflows/docker-image.yml/badge.svg" />
+  <img alt="codecov" src="https://codecov.io/gh/WesGtoX/xml-converter-exercise/branch/main/graph/badge.svg?token=8uo3eqGYjw" />
   <img alt="GitHub top language" src="https://img.shields.io/github/languages/top/wesgtox/xml-converter-exercise?style=plastic" />
   <img alt="GitHub language count" src="https://img.shields.io/github/languages/count/wesgtox/xml-converter-exercise?style=plastic" />
   <img alt="GitHub last commit" src="https://img.shields.io/github/last-commit/wesgtox/xml-converter-exercise?style=plastic" />

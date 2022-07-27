@@ -1,4 +1,4 @@
-name: XML Converter Exercise CI
+name: XML Converter CI
 
 on:
   push:
