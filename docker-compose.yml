@@ -1,7 +1,7 @@
 version: "3.8"
 
 services:
-  excercise:
+  exercise:
     build: .
     environment:
       - DJANGO_ENV=development

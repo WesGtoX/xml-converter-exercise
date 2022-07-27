@@ -88,6 +88,22 @@ make test
 ```
 
 
+## Usage
+
+### Examples of how to use:
+
+- Via POST Request in the API:
+```bash
+curl --request POST \
+  --url http://127.0.0.1:8000/api/converter/convert/ \
+  --header 'Content-Type: multipart/form-data' \
+  --form file=@/path/file.xml
+```
+
+- Through the browser via an input form file:
+LINK: [http://127.0.0.1:8000/connected/](http://127.0.0.1:8000/connected/)
+
+
 ## Roadmap
 
 See the [open issues](https://github.com/WesGtoX/xml-converter-exercise/issues) for a list of proposed features (and known issues).
